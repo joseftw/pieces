@@ -1,0 +1,97 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {background-image:url('../img/bg.png');}
+#main {position: relative; width:645px; height:700px; margin:0 auto; margin-top:60px;}
+.bigRectangle {width:430px; height:215px; float:left; position:relative; overflow: hidden;}
+.rectangle {width:215px; height:215px;  float:left; position: relative; z-index:1;}
+.triangle {width:0; height:0; position: absolute; z-index: 10; border-style: solid; }
+
+.right-triangle {border-width: 0 0 215px 215px; }
+  .right-triangle-no-show {border-width: 0 0 215px 215px; border-color: transparent transparent white transparent;}
+.bottom-left-triangle {border-width: 215px 0 0 215px;}
+  .left-triangle-no-show {border-width: 107.5px 186.2px 107.5px 0; border-color: transparent white transparent transparent;}
+.top-right-triangle {border-width: 0 215px 215px 0; }
+.top-left-triangle {border-width: 215px 215px 0 0; }
+  .top-left-triangle-no-show {border-width: 215px 215px 0 0; }
+
+.highRectangle {height:430px; overflow: hidden;}
+.gameImage {position: absolute;}
+
+#row1-1-right-triangle {border-color: white transparent transparent transparent;}
+#row1-2-right-triangle {margin-left:215px; border-color: transparent transparent #93C544 transparent; }
+#row2-1-left-triangle {border-color: #C7E294 transparent transparent transparent;}
+#row2-1-right-triangle {border-color: transparent transparent white transparent;}
+#row2-2-right-triangle {margin-left:215px; border-color: transparent transparent #C4F3F3 transparent; }
+#row2-2-left-triangle {border-color: #84AF69 transparent transparent transparent;}
+#row3-1-right-triangle {position:absolute; border-color: transparent transparent white transparent; }
+#row3-2-bottom-triangle {border-color: #3BBBC4 transparent transparent transparent; bottom:0px;}
+#row3-2-left-triangle {border-color: white transparent transparent transparent;}
+#row3-2-right-triangle {bottom:0px; border-color: transparent transparent white transparent;}
+#row3-3-left-triangle {border-color: #C7E294 transparent transparent transparent;}
+#row3-3-right-triangle {display: none;}
+
+.rectangleInfo {position:absolute; margin-left:107px;  width:216px; height:215px; z-index:100; }
+.rectangleInfo {-moz-transform:rotate(40deg); -ms-transform:rotate(40deg); -o-transform:rotate(40deg); -webkit-transform: rotate(40deg); -moz-transform: skew(-45deg); -ms-transform: skew(-45deg); -o-transform: skew(-45deg); -webkit-transform: skew(-45deg);}
+
+.weirdShape {position:absolute; top:0px;  width:215px; height:430px; z-index:100; }
+.weirdShape {-ms-transform: skew(-45deg); -o-transform: skew(-45deg); -moz-transform: skew(-45deg); -webkit-transform: skew(-45deg);}
+.weirdShape:hover { background: black; opacity:0.7;}
+.rectangleContent {background: red; width:100px; height:100px; position: absolute; top:70px; left:60px; -webkit-transform: skew(45deg);}
+
+#firstGameOverlay { opacity:0.8; background: #E2F0C9;}
+#secondGameOverlay {opacity:0.8; background: #8ACCAC;}
+#thirdGameOverlay {opacity:0.8; background: #268499; }
+
+#gameImage1 {margin-top:-100px; }
+#gameImage2 {margin-top:-30px; margin-left:-70px; }
+#gameImage3 { margin-left:-560px; }
+
+.gameInfo {width:130px; height:70px; background: red; position: absolute; z-index:100; display: none;}
+#firstGameInfo {left:170px; top:50px;}
